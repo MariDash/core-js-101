@@ -124,7 +124,7 @@ function timeSpanToString(startDate, endDate) {
 function angleBetweenClockHands(date) {
   const dat = new Date(date);
   const min = dat.getMinutes();
-  let hours = dat.getHours() - 3;
+  let hours = dat.getUTCHours();
   if (hours < 0) {
     hours += 12;
   } else if (hours >= 12) {
